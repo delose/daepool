@@ -1,0 +1,74 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength",
+                "pattern"
+            ],
+            "fieldValidateRulesMinlength": "1",
+            "fieldValidateRulesMaxlength": "20",
+            "fieldValidateRulesPattern": "^[a-zA-Z0-9]*$",
+            "fieldValidateRulesPatternJava": "^[a-zA-Z0-9]*$"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength",
+                "pattern"
+            ],
+            "fieldValidateRulesMinlength": "1",
+            "fieldValidateRulesMaxlength": "120",
+            "fieldValidateRulesPattern": "^[a-zA-Z0-9]*$",
+            "fieldValidateRulesPatternJava": "^[a-zA-Z0-9]*$"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "size",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "createtime",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "refreshtime",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "criteria",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20151202100548",
+    "dto": "no",
+    "pagination": "infinite-scroll"
+}

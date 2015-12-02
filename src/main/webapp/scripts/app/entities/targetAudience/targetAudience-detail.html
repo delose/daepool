@@ -1,0 +1,78 @@
+
+<div>
+    <h2><span translate="daepoolApp.targetAudience.detail.title">TargetAudience</span> {{targetAudience.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="daepoolApp.targetAudience.name">Name</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{targetAudience.name}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="daepoolApp.targetAudience.description">Description</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{targetAudience.description}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="daepoolApp.targetAudience.size">Size</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{targetAudience.size}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="daepoolApp.targetAudience.createtime">Createtime</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{targetAudience.createtime | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="daepoolApp.targetAudience.refreshtime">Refreshtime</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{targetAudience.refreshtime | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="daepoolApp.targetAudience.criteria">Criteria</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{targetAudience.criteria}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="daepoolApp.targetAudience.user">user</span>
+                </td>
+                <td>
+                    {{targetAudience.user.id}}
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

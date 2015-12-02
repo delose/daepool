@@ -1,0 +1,27 @@
+{
+    "daepoolApp": {
+        "campaign" : {
+            "home": {
+                "title": "Campaigns",
+                "createLabel": "Create a new Campaign",
+                "createOrEditLabel": "Create or edit a Campaign"
+            },
+            "created": "A new Campaign is created with identifier {{ param }}",
+            "updated": "A Campaign is updated with identifier {{ param }}",
+            "deleted": "A Campaign is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Campaign {{ id }}?"
+            },
+            "detail": {
+                "title": "Campaign"
+            },
+            "name": "Name",
+            "description": "Description",
+            "type": "Type",
+            "starttime": "Starttime",
+            "endtime": "Endtime",
+            "status": "Status",
+            "user": "User"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "daepool",
+    "packageName": "ph.talas.daepool",
+    "packageFolder": "ph/talas/daepool",
+    "authenticationType": "xauth",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "elasticsearch",
+    "useSass": false,
+    "buildTool": "gradle",
+    "frontendBuilder": "grunt",
+    "enableTranslation": true,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "82bcfe5923f489bc38df23e1c3e2bc2efc0b0bfe",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}

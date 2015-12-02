@@ -1,0 +1,28 @@
+{
+    "daepoolApp": {
+        "targetAudience" : {
+            "home": {
+                "title": "TargetAudiences",
+                "createLabel": "Créer un nouveau TargetAudience",
+                "createOrEditLabel": "Créer ou éditer un TargetAudience"
+            },
+            "created": "Un nouveau TargetAudience a été créé avec l'identifiant {{ param }}",
+            "updated": "Le TargetAudience avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le TargetAudience avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le TargetAudience {{ id }} ?"
+            },
+            "detail": {
+                "title": "TargetAudience"
+            },
+            "name": "Name",
+            "description": "Description",
+            "size": "Size",
+            "createtime": "Createtime",
+            "refreshtime": "Refreshtime",
+            "criteria": "Criteria",
+            "user": "User"
+        }
+    }
+}
+

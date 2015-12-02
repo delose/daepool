@@ -1,0 +1,191 @@
+C:\Users\ps.ecdelossantos\projects\daepool>yo jhipster:entity TargetAudience
+The entity TargetAudience is being created.
+Generating field #1
+? Do you want to add a field to your entity? Yes
+? What is the name of your field? name
+? What is the type of your field? String
+? Do you want to add validation rules to your field? Yes
+? Which validation rules do you want to add? Required, Minimum length, Maximum length, Regular expression pattern
+? What is the minimum length of your field? 1
+? What is the maximum length of your field? 20
+? What is the regular expression pattern you want to apply on your field? ^[a-zA-Z0-9]*$
+=================TargetAudience=================
+name (String) required minlength='1' maxlength='20' pattern='^[a-zA-Z0-9]*$'
+Generating field #2
+? Do you want to add a field to your entity? Yes
+? What is the name of your field? description
+? What is the type of your field? String
+? Do you want to add validation rules to your field? Yes
+? Which validation rules do you want to add? Required, Minimum length, Maximum length, Regular expression pattern
+? What is the minimum length of your field? 1
+? What is the maximum length of your field? 120
+? What is the regular expression pattern you want to apply on your field? ^[a-zA-Z0-9]*$
+=================TargetAudience=================
+name (String) required minlength='1' maxlength='20' pattern='^[a-zA-Z0-9]*$'
+description (String) required minlength='1' maxlength='120' pattern='^[a-zA-Z0-9]*$'
+Generating field #3
+? Do you want to add a field to your entity? Yes
+? What is the name of your field? size
+? What is the type of your field? Integer
+? Do you want to add validation rules to your field? Yes
+? Which validation rules do you want to add? Required
+=================TargetAudience=================
+name (String) required minlength='1' maxlength='20' pattern='^[a-zA-Z0-9]*$'
+description (String) required minlength='1' maxlength='120' pattern='^[a-zA-Z0-9]*$'
+size (Integer) required
+Generating field #4
+? Do you want to add a field to your entity? Yes
+? What is the name of your field? createtime
+? What is the type of your field? LocalDate
+? Do you want to add validation rules to your field? Yes
+? Which validation rules do you want to add?
+=================TargetAudience=================
+name (String) required minlength='1' maxlength='20' pattern='^[a-zA-Z0-9]*$'
+description (String) required minlength='1' maxlength='120' pattern='^[a-zA-Z0-9]*$'
+size (Integer) required
+createtime (LocalDate)
+Generating field #5
+? Do you want to add a field to your entity? Yes
+? What is the name of your field? refreshtime
+? What is the type of your field? LocalDate
+? Do you want to add validation rules to your field? Yes
+? Which validation rules do you want to add?
+=================TargetAudience=================
+name (String) required minlength='1' maxlength='20' pattern='^[a-zA-Z0-9]*$'
+description (String) required minlength='1' maxlength='120' pattern='^[a-zA-Z0-9]*$'
+size (Integer) required
+createtime (LocalDate)
+refreshtime (LocalDate)
+Generating field #6
+? Do you want to add a field to your entity? Yes
+? What is the name of your field? criteria
+? What is the type of your field? String
+? Do you want to add validation rules to your field? Yes
+? Which validation rules do you want to add? Required
+=================TargetAudience=================
+name (String) required minlength='1' maxlength='20' pattern='^[a-zA-Z0-9]*$'
+description (String) required minlength='1' maxlength='120' pattern='^[a-zA-Z0-9]*$'
+size (Integer) required
+createtime (LocalDate)
+refreshtime (LocalDate)
+criteria (String) required
+Generating field #7
+? Do you want to add a field to your entity? No
+=================TargetAudience=================
+name (String) required minlength='1' maxlength='20' pattern='^[a-zA-Z0-9]*$'
+description (String) required minlength='1' maxlength='120' pattern='^[a-zA-Z0-9]*$'
+size (Integer) required
+createtime (LocalDate)
+refreshtime (LocalDate)
+criteria (String) required
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? user
+? What is the name of the relationship? user
+? What is the type of the relationship? many-to-one
+? When you display this relationship with AngularJS, which field from 'user' do you want to use? id
+===========TargetAudience==============
+name (String)
+description (String)
+size (Integer)
+createtime (LocalDate)
+refreshtime (LocalDate)
+criteria (String)
+-------------------
+user - user (many-to-one)
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? No
+===========TargetAudience==============
+name (String)
+description (String)
+size (Integer)
+createtime (LocalDate)
+refreshtime (LocalDate)
+criteria (String)
+-------------------
+user - user (many-to-one)
+? Do you want to use a Data Transfer Object (DTO)? No, use the entity directly
+? Do you want pagination on your entity? Yes, with infinite scroll
+Everything is configured, generating the entity...
+   create .jhipster\TargetAudience.json
+   create src\main\java\ph\talas\daepool\domain\TargetAudience.java
+   create src\main\java\ph\talas\daepool\repository\TargetAudienceRepository.java
+   create src\main\java\ph\talas\daepool\repository\search\TargetAudienceSearchRepository.java
+   create src\main\java\ph\talas\daepool\web\rest\TargetAudienceResource.java
+   create src\main\resources\config\liquibase\changelog\20151202100548_added_entity_TargetAudience.xml
+   create src\main\webapp\scripts\app\entities\targetAudience\targetAudiences.html
+   create src\main\webapp\scripts\app\entities\targetAudience\targetAudience-detail.html
+   create src\main\webapp\scripts\app\entities\targetAudience\targetAudience-dialog.html
+   create src\main\webapp\scripts\app\entities\targetAudience\targetAudience-delete-dialog.html
+   create src\main\webapp\scripts\app\entities\targetAudience\targetAudience.js
+   create src\main\webapp\scripts\app\entities\targetAudience\targetAudience.controller.js
+   create src\main\webapp\scripts\app\entities\targetAudience\targetAudience-dialog.controller.js
+   create src\main\webapp\scripts\app\entities\targetAudience\targetAudience-delete-dialog.controller.js
+   create src\main\webapp\scripts\app\entities\targetAudience\targetAudience-detail.controller.js
+   create src\test\javascript\spec\app\entities\targetAudience\targetAudience-detail.controller.spec.js
+   create src\main\webapp\scripts\components\entities\targetAudience\targetAudience.service.js
+   create src\main\webapp\scripts\components\entities\targetAudience\targetAudience.search.service.js
+   create src\test\java\ph\talas\daepool\web\rest\TargetAudienceResourceIntTest.java
+   create src\test\gatling\simulations\TargetAudienceGatlingTest.scala
+   create src\main\webapp\i18n\en\targetAudience.json
+   create src\main\webapp\i18n\fr\targetAudience.json
+
+C:\Users\ps.ecdelossantos\projects\daepool>yo jhipster:entity Campaign
+
+#########################################################################################
+
+
+? Do you want to use a Data Transfer Object (DTO)? No, use the entity directly
+? Do you want pagination on your entity? Yes, with pagination links
+Everything is configured, generating the entity...
+   create .jhipster\Campaign.json
+   create src\main\java\ph\talas\daepool\domain\enumeration\Status.java
+   create src\main\webapp\i18n\en\status.json
+   create src\main\java\ph\talas\daepool\domain\Campaign.java
+   create src\main\java\ph\talas\daepool\repository\CampaignRepository.java
+   create src\main\java\ph\talas\daepool\repository\search\CampaignSearchRepository.java
+   create src\main\java\ph\talas\daepool\web\rest\CampaignResource.java
+   create src\main\resources\config\liquibase\changelog\20151202101101_added_entity_Campaign.xml
+   create src\main\webapp\scripts\app\entities\campaign\campaigns.html
+   create src\main\webapp\scripts\app\entities\campaign\campaign-detail.html
+   create src\main\webapp\scripts\app\entities\campaign\campaign-dialog.html
+   create src\main\webapp\scripts\app\entities\campaign\campaign-delete-dialog.html
+   create src\main\webapp\scripts\app\entities\campaign\campaign.js
+   create src\main\webapp\scripts\app\entities\campaign\campaign.controller.js
+   create src\main\webapp\scripts\app\entities\campaign\campaign-dialog.controller.js
+   create src\main\webapp\scripts\app\entities\campaign\campaign-delete-dialog.controller.js
+   create src\main\webapp\scripts\app\entities\campaign\campaign-detail.controller.js
+   create src\test\javascript\spec\app\entities\campaign\campaign-detail.controller.spec.js
+   create src\main\webapp\scripts\components\entities\campaign\campaign.service.js
+   create src\main\webapp\scripts\components\entities\campaign\campaign.search.service.js
+   create src\test\java\ph\talas\daepool\web\rest\CampaignResourceIntTest.java
+   create src\test\gatling\simulations\CampaignGatlingTest.scala
+   create src\main\webapp\i18n\en\campaign.json
+   create src\main\webapp\i18n\fr\campaign.json
+
+C:\Users\ps.ecdelossantos\projects\daepool>gradlew test
+Starting the Unit and Integration test
+:generateMainMapperClasses
+:bower
+:processResources
+:compileJava
+:compileScala UP-TO-DATE
+:classes
+:compileTestJava
+:compileTestScala
+Download https://oss.sonatype.org/content/repositories/releases/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.jar
+[ant:scalac] warning: there were 6 feature warnings; re-run with -feature for details
+
+[ant:scalac] one warning found
+
+:processTestResources UP-TO-DATE
+:testClasses
+:test
+[INFO] ph.talas.daepool.config.CacheConfiguration - Remove Cache Manager metrics
+[INFO] ph.talas.daepool.config.CacheConfiguration - Closing Cache Manager
+:cucumberTest UP-TO-DATE
+
+BUILD SUCCESSFUL
+
+Total time: 9 mins 14.471 secs
+C:\Users\ps.ecdelossantos\projects\daepool>

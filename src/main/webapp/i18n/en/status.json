@@ -1,0 +1,9 @@
+{
+    "daepoolApp": {
+        "Status" : {
+            "null": "",
+            "active": "active",
+            "inactive": "inactive"
+        }
+    }
+}

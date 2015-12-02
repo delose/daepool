@@ -1,0 +1,71 @@
+<div>
+    <h2 translate="daepoolApp.targetAudience.home.title">TargetAudiences</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="targetAudience.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="daepoolApp.targetAudience.home.createLabel">Create a new TargetAudience</span>
+                </button>
+            </div>
+            <div class="col-md-8">
+                <form name="searchForm" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="query">
+                    </div>
+                    <button class="btn btn-info" ng-click="search()"><span class="glyphicon glyphicon-search"></span> <span>Search a TargetAudience</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="global.field.id">ID</th>
+                    <th translate="daepoolApp.targetAudience.name">Name</th>
+                    <th translate="daepoolApp.targetAudience.description">Description</th>
+                    <th translate="daepoolApp.targetAudience.size">Size</th>
+                    <th translate="daepoolApp.targetAudience.createtime">Createtime</th>
+                    <th translate="daepoolApp.targetAudience.refreshtime">Refreshtime</th>
+                    <th translate="daepoolApp.targetAudience.criteria">Criteria</th>
+                    <th translate="daepoolApp.targetAudience.user">user</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="loadPage(page + 1)" infinite-scroll-disabled="links['last'] == page">
+                <tr ng-repeat="targetAudience in targetAudiences track by targetAudience.id">
+                    <td><a ui-sref="targetAudience.detail({id:targetAudience.id})">{{targetAudience.id}}</a></td>
+                    <td>{{targetAudience.name}}</td>
+                    <td>{{targetAudience.description}}</td>
+                    <td>{{targetAudience.size}}</td>
+                        <td>{{targetAudience.createtime | date:'mediumDate'}}</td>
+                        <td>{{targetAudience.refreshtime | date:'mediumDate'}}</td>
+                    <td>{{targetAudience.criteria}}</td>
+                    <td>
+                        {{targetAudience.user.id}}
+                    </td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="targetAudience.detail({id:targetAudience.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="targetAudience.edit({id:targetAudience.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="targetAudience.delete({id:targetAudience.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,120 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myTargetAudienceLabel" translate="daepoolApp.targetAudience.home.createOrEditLabel">Create or edit a TargetAudience</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="targetAudience.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="daepoolApp.targetAudience.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="targetAudience.name"
+                    required ng-minlength="1" ng-maxlength="20" ng-pattern="/^[a-zA-Z0-9]*$/" />
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.name.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.name.$error.minlength" translate="entity.validation.minlength" translate-value-min="1">
+                    This field is required to be at least 1 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.name.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.name.$error.pattern" translate="entity.validation.pattern" translate-value-pattern="^[a-zA-Z0-9]*$">
+                    This field should follow pattern "^[a-zA-Z0-9]*$".
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="daepoolApp.targetAudience.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="targetAudience.description"
+                    required ng-minlength="1" ng-maxlength="120" ng-pattern="/^[a-zA-Z0-9]*$/" />
+            <div ng-show="editForm.description.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.description.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.description.$error.minlength" translate="entity.validation.minlength" translate-value-min="1">
+                    This field is required to be at least 1 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.description.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="120">
+                    This field cannot be longer than 120 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.description.$error.pattern" translate="entity.validation.pattern" translate-value-pattern="^[a-zA-Z0-9]*$">
+                    This field should follow pattern "^[a-zA-Z0-9]*$".
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="daepoolApp.targetAudience.size" for="field_size">Size</label>
+            <input type="number" class="form-control" name="size" id="field_size"
+                    ng-model="targetAudience.size"
+                    required />
+            <div ng-show="editForm.size.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.size.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.size.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="daepoolApp.targetAudience.createtime" for="field_createtime">Createtime</label>
+            <input type="date" class="form-control" name="createtime" id="field_createtime"
+                    ng-model="targetAudience.createtime"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="daepoolApp.targetAudience.refreshtime" for="field_refreshtime">Refreshtime</label>
+            <input type="date" class="form-control" name="refreshtime" id="field_refreshtime"
+                    ng-model="targetAudience.refreshtime"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="daepoolApp.targetAudience.criteria" for="field_criteria">Criteria</label>
+            <input type="text" class="form-control" name="criteria" id="field_criteria"
+                    ng-model="targetAudience.criteria"
+                    required />
+            <div ng-show="editForm.criteria.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.criteria.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="daepoolApp.targetAudience.user" for="field_user">user</label>
+            <select class="form-control" id="field_user" name="user" ng-model="targetAudience.user" ng-options="user as user.id for user in users track by user.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
